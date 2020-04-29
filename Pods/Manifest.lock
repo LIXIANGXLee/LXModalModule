@@ -1,0 +1,23 @@
+PODS:
+  - LXFitManager (1.0.0)
+  - LXModalManager (0.0.1):
+    - LXFitManager (~> 1.0.0)
+
+DEPENDENCIES:
+  - LXModalManager (from `./`)
+
+SPEC REPOS:
+  trunk:
+    - LXFitManager
+
+EXTERNAL SOURCES:
+  LXModalManager:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  LXFitManager: e8f88896ba1c848c263c49250b590802a987ab3e
+  LXModalManager: db8c0ed28569b4b430742e3d27f12670291bbfb8
+
+PODFILE CHECKSUM: 21bf34daf93c1682b0320b2bd4d471f396f1d787
+
+COCOAPODS: 1.9.1

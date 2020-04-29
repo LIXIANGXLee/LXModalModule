@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		040EF3422459957D00153CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF3412459957D00153CDA /* AppDelegate.swift */; };
-		040EF3442459957D00153CDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF3432459957D00153CDA /* SceneDelegate.swift */; };
 		040EF3462459957D00153CDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF3452459957D00153CDA /* ViewController.swift */; };
-		040EF3492459957D00153CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040EF3472459957D00153CDA /* Main.storyboard */; };
 		040EF34B2459958000153CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040EF34A2459958000153CDA /* Assets.xcassets */; };
 		040EF34E2459958000153CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040EF34C2459958000153CDA /* LaunchScreen.storyboard */; };
+		040EF3572459968A00153CDA /* LXModalManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 040EF3562459968A00153CDA /* LXModalManager.podspec */; };
+		040EF3592459984E00153CDA /* LXBaseModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF3582459984E00153CDA /* LXBaseModalController.swift */; };
+		040EF35B245999AC00153CDA /* LXShowModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF35A245999AC00153CDA /* LXShowModalController.swift */; };
+		040EF35D24599D6A00153CDA /* LXModalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EF35C24599D6A00153CDA /* LXModalConfig.swift */; };
+		4BE1BEB5C0EEEA2EDC6F29E2 /* Pods_LXModalModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61EF79A88B644C99C642FA /* Pods_LXModalModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		040EF33E2459957D00153CDA /* LXModalModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXModalModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040EF3412459957D00153CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		040EF3432459957D00153CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		040EF3452459957D00153CDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		040EF3482459957D00153CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		040EF34A2459958000153CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040EF34D2459958000153CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040EF34F2459958000153CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040EF3562459968A00153CDA /* LXModalManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LXModalManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		040EF3582459984E00153CDA /* LXBaseModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXBaseModalController.swift; sourceTree = "<group>"; };
+		040EF35A245999AC00153CDA /* LXShowModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXShowModalController.swift; sourceTree = "<group>"; };
+		040EF35C24599D6A00153CDA /* LXModalConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXModalConfig.swift; sourceTree = "<group>"; };
+		603AF69DB41185385B490557 /* Pods-LXModalModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXModalModule.debug.xcconfig"; path = "Target Support Files/Pods-LXModalModule/Pods-LXModalModule.debug.xcconfig"; sourceTree = "<group>"; };
+		AE61EF79A88B644C99C642FA /* Pods_LXModalModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXModalModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC132AA41D420743F0B371AE /* Pods-LXModalModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXModalModule.release.xcconfig"; path = "Target Support Files/Pods-LXModalModule/Pods-LXModalModule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE1BEB5C0EEEA2EDC6F29E2 /* Pods_LXModalModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +49,12 @@
 		040EF3352459957D00153CDA = {
 			isa = PBXGroup;
 			children = (
+				040EF3562459968A00153CDA /* LXModalManager.podspec */,
+				040EF3552459968100153CDA /* LXModalManager */,
 				040EF3402459957D00153CDA /* LXModalModule */,
 				040EF33F2459957D00153CDA /* Products */,
+				8D67C2C04C8ADBBA2298F1B5 /* Pods */,
+				050F3F9E2B6AE44244A9C21B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +70,39 @@
 			isa = PBXGroup;
 			children = (
 				040EF3412459957D00153CDA /* AppDelegate.swift */,
-				040EF3432459957D00153CDA /* SceneDelegate.swift */,
 				040EF3452459957D00153CDA /* ViewController.swift */,
-				040EF3472459957D00153CDA /* Main.storyboard */,
 				040EF34A2459958000153CDA /* Assets.xcassets */,
 				040EF34C2459958000153CDA /* LaunchScreen.storyboard */,
 				040EF34F2459958000153CDA /* Info.plist */,
 			);
 			path = LXModalModule;
+			sourceTree = "<group>";
+		};
+		040EF3552459968100153CDA /* LXModalManager */ = {
+			isa = PBXGroup;
+			children = (
+				040EF3582459984E00153CDA /* LXBaseModalController.swift */,
+				040EF35A245999AC00153CDA /* LXShowModalController.swift */,
+				040EF35C24599D6A00153CDA /* LXModalConfig.swift */,
+			);
+			path = LXModalManager;
+			sourceTree = "<group>";
+		};
+		050F3F9E2B6AE44244A9C21B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE61EF79A88B644C99C642FA /* Pods_LXModalModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D67C2C04C8ADBBA2298F1B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				603AF69DB41185385B490557 /* Pods-LXModalModule.debug.xcconfig */,
+				EC132AA41D420743F0B371AE /* Pods-LXModalModule.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 040EF3522459958000153CDA /* Build configuration list for PBXNativeTarget "LXModalModule" */;
 			buildPhases = (
+				0B6B5FB3EF9E0878CF29AC48 /* [CP] Check Pods Manifest.lock */,
 				040EF33A2459957D00153CDA /* Sources */,
 				040EF33B2459957D00153CDA /* Frameworks */,
 				040EF33C2459957D00153CDA /* Resources */,
+				DA534DAFE8051A23ABA06D4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +167,53 @@
 			files = (
 				040EF34E2459958000153CDA /* LaunchScreen.storyboard in Resources */,
 				040EF34B2459958000153CDA /* Assets.xcassets in Resources */,
-				040EF3492459957D00153CDA /* Main.storyboard in Resources */,
+				040EF3572459968A00153CDA /* LXModalManager.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B6B5FB3EF9E0878CF29AC48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXModalModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA534DAFE8051A23ABA06D4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXModalModule/Pods-LXModalModule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXModalModule/Pods-LXModalModule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LXModalModule/Pods-LXModalModule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		040EF33A2459957D00153CDA /* Sources */ = {
@@ -139,22 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				040EF3462459957D00153CDA /* ViewController.swift in Sources */,
+				040EF35D24599D6A00153CDA /* LXModalConfig.swift in Sources */,
 				040EF3422459957D00153CDA /* AppDelegate.swift in Sources */,
-				040EF3442459957D00153CDA /* SceneDelegate.swift in Sources */,
+				040EF3592459984E00153CDA /* LXBaseModalController.swift in Sources */,
+				040EF35B245999AC00153CDA /* LXShowModalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		040EF3472459957D00153CDA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				040EF3482459957D00153CDA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		040EF34C2459958000153CDA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +358,7 @@
 		};
 		040EF3532459958000153CDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603AF69DB41185385B490557 /* Pods-LXModalModule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +377,7 @@
 		};
 		040EF3542459958000153CDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC132AA41D420743F0B371AE /* Pods-LXModalModule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
