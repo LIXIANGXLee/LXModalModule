@@ -3,41 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		5A1FA955CF41BF1F64630FB280A3B0C0 /* LXModalManager */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1D5526F1FC25DA6D20DDA9EBC2EA8746 /* Build configuration list for PBXAggregateTarget "LXModalManager" */;
-			buildPhases = (
-			);
-			dependencies = (
-				E0D39E8F694576ED409D85B24BF61B2F /* PBXTargetDependency */,
-			);
-			name = LXModalManager;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
+		0DFD2218A020856FC51622B567C10A9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCB65B3DDB68CB2801794AC6AD13094 /* Foundation.framework */; };
+		16499105C258169A70FDAEF51B1E48C7 /* LXBaseModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DEB37302E9A44826279F50DDF8AABE /* LXBaseModalController.swift */; };
+		18C7838A4A56925A217977951C79AA02 /* LXFitManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210710B83846B0CA28FD57365AC8809C /* LXFitManager.framework */; };
 		20E2373AEF16FC765BED92911CF71B9E /* Pods-LXModalModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85041D5AD6387015DFFADECBCC1DEE58 /* Pods-LXModalModule-dummy.m */; };
-		53F3E390F35CF8D7CCD87F99E8CF3FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		38D3288CBE96BCDFFAE8576ED9BD7884 /* LXModalManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9269DF268926380244824F1C9E3F6279 /* LXModalManager-dummy.m */; };
+		53F3E390F35CF8D7CCD87F99E8CF3FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCB65B3DDB68CB2801794AC6AD13094 /* Foundation.framework */; };
 		7A04CDF981D068D83B1B34A7728A7468 /* LXFitManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FD14158262C9770469178DB5ADACE5 /* LXFitManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A093DCCE4A412A20834EEAFD56FF24B3 /* LXFitManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D71F0A043311BA8E159F6CBD00F5FD /* LXFitManager-dummy.m */; };
+		A50EEDD0E3C25CE72F41EEB91828EAD5 /* LXModalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30DFF124D4CE0EA2FE7A651ABB71C0 /* LXModalConfig.swift */; };
 		A84A502929E973FA2B3BFC561520DDDB /* LXFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C08C4BA5EC19BAD61DCC7ECCBF345 /* LXFit.swift */; };
 		A85A5D6580F4A51114A13988EBEB3510 /* Pods-LXModalModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CEB710024B6B0949797E6E9304BD989 /* Pods-LXModalModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F275290FB5929F6F5433630972016D3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		AF8DD9A548E52795F66C881A77416CCB /* LXModalManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D00BD5F903D07D1FF1651FA26A4366DA /* LXModalManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9948DB50310EB270FE3DB9E37FF6CD8 /* LXShowModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47DDCD0ACE5FFDBC1ABDE9D17AFB41 /* LXShowModalController.swift */; };
+		F275290FB5929F6F5433630972016D3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCB65B3DDB68CB2801794AC6AD13094 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		31135C0EB5CAEE778F6EF593582691E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8ED050C8B9768109B203E0B9CBBCAEC1;
-			remoteInfo = LXFitManager;
-		};
-		A903E049F01218F5E90B2EA4BF129971 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -51,33 +38,51 @@
 			remoteGlobalIDString = 5A1FA955CF41BF1F64630FB280A3B0C0;
 			remoteInfo = LXModalManager;
 		};
+		FF23CD695CDC2A1A05ABAD615C9726FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ED050C8B9768109B203E0B9CBBCAEC1;
+			remoteInfo = LXFitManager;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05FD14158262C9770469178DB5ADACE5 /* LXFitManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXFitManager-umbrella.h"; sourceTree = "<group>"; };
 		07F537B10ABE91397DE0A4D92FE1C7EA /* Pods-LXModalModule-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LXModalModule-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0B83D56DB344F5ED059A14BAD7CFE702 /* Pods-LXModalModule-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXModalModule-frameworks.sh"; sourceTree = "<group>"; };
+		0CC3D498D50E97E696274A6839E719F0 /* LXModalManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LXModalManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0CEB710024B6B0949797E6E9304BD989 /* Pods-LXModalModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LXModalModule-umbrella.h"; sourceTree = "<group>"; };
+		210710B83846B0CA28FD57365AC8809C /* LXFitManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LXFitManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F4D39098C1452CE1C8E979B1AD9E7D /* LXFitManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXFitManager.debug.xcconfig; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3321CEF32F261193B2413491DD44DA3B /* LXModalManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LXModalManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3888DD53BBE7B7DFC0D5D8540E57BE76 /* LXFitManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXFitManager.framework; path = LXFitManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BF79FA989D084E5C4A7738AE5E88F63 /* LXModalManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalManager.debug.xcconfig; sourceTree = "<group>"; };
 		4878080D1C91DEBD39C8A495180D1607 /* Pods-LXModalModule-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalModule-acknowledgements.plist"; sourceTree = "<group>"; };
 		4F567E8488F0EA1E6CA91138AA4AC278 /* Pods-LXModalModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXModalModule-Info.plist"; sourceTree = "<group>"; };
 		554BD54E9D0D1EEB3B1D023FC8DD939D /* LXFitManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXFitManager.release.xcconfig; sourceTree = "<group>"; };
 		5E4A83568E6A989DCDD706766E159F49 /* Pods-LXModalModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LXModalModule.modulemap"; sourceTree = "<group>"; };
+		70F9C98A79A78FBDE06274635AB73450 /* LXModalManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalManager-prefix.pch"; sourceTree = "<group>"; };
 		78D71F0A043311BA8E159F6CBD00F5FD /* LXFitManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXFitManager-dummy.m"; sourceTree = "<group>"; };
 		7E95B5F0CE6B362A9C8F5988A3F7AAA3 /* Pods-LXModalModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalModule.debug.xcconfig"; sourceTree = "<group>"; };
 		85041D5AD6387015DFFADECBCC1DEE58 /* Pods-LXModalModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LXModalModule-dummy.m"; sourceTree = "<group>"; };
+		86CD4B82A39F7BA9E6A7E3FA7EE070A1 /* LXModalManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXModalManager.framework; path = LXModalManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9001B4929B2A6C86365F3D56336146A8 /* Pods-LXModalModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXModalModule.release.xcconfig"; sourceTree = "<group>"; };
+		9269DF268926380244824F1C9E3F6279 /* LXModalManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXModalManager-dummy.m"; sourceTree = "<group>"; };
+		95B1442C1F3327D4F37698E88CFF6436 /* LXModalManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalManager.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A29FBF78CC31EC555FC83BDB8B627784 /* LXModalManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalManager.release.xcconfig; sourceTree = "<group>"; };
 		A4D5A9C54148E7154E587B42BD9E4F04 /* LXFitManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LXFitManager-Info.plist"; sourceTree = "<group>"; };
 		A64C08C4BA5EC19BAD61DCC7ECCBF345 /* LXFit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXFit.swift; path = LXFitManager/LXFit.swift; sourceTree = "<group>"; };
+		AF30DFF124D4CE0EA2FE7A651ABB71C0 /* LXModalConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXModalConfig.swift; path = LXModalManager/LXModalConfig.swift; sourceTree = "<group>"; };
+		B51B576C17FC9AEEFD7776241A79FFB0 /* LXModalManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LXModalManager-Info.plist"; sourceTree = "<group>"; };
 		C3701F325F140A94653A88E8CC348D25 /* LXFitManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LXFitManager.modulemap; sourceTree = "<group>"; };
+		C48DB5D5AEE0C045E61C1471FB777537 /* LXModalManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXModalManager.release.xcconfig; sourceTree = "<group>"; };
 		C4BB252B0FC59BA870D52AC24E0FADAC /* Pods_LXModalModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LXModalModule.framework; path = "Pods-LXModalModule.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC8C65D2DAFAAEE550CDA6F1FE7B9F1 /* LXModalManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LXModalManager.modulemap; sourceTree = "<group>"; };
+		CDCB65B3DDB68CB2801794AC6AD13094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D00BD5F903D07D1FF1651FA26A4366DA /* LXModalManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXModalManager-umbrella.h"; sourceTree = "<group>"; };
+		D4DEB37302E9A44826279F50DDF8AABE /* LXBaseModalController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXBaseModalController.swift; path = LXModalManager/LXBaseModalController.swift; sourceTree = "<group>"; };
+		E30E3E3963F122F09DC2F34C9CF03F72 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F4A987A6133CF8DC118F3F55754600A3 /* LXFitManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXFitManager-prefix.pch"; sourceTree = "<group>"; };
+		FA47DDCD0ACE5FFDBC1ABDE9D17AFB41 /* LXShowModalController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LXShowModalController.swift; path = LXModalManager/LXShowModalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,24 +102,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB94C9BCA6FB525BDB14146BF4E3C5EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFD2218A020856FC51622B567C10A9B /* Foundation.framework in Frameworks */,
+				18C7838A4A56925A217977951C79AA02 /* LXFitManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03E082EFC21B2DAE8EA2CCEA779B7143 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3888DD53BBE7B7DFC0D5D8540E57BE76 /* LXFitManager.framework */,
-				C4BB252B0FC59BA870D52AC24E0FADAC /* Pods_LXModalModule.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0F76CE583899BBA7985B97DDB194FA3F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				1F49BE8C377F68AC74F8ECC9D8384A85 /* LXFitManager */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A189848A5FE5B12CD1B754B3922B7BC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8C65D2DAFAAEE550CDA6F1FE7B9F1 /* LXModalManager.modulemap */,
+				9269DF268926380244824F1C9E3F6279 /* LXModalManager-dummy.m */,
+				B51B576C17FC9AEEFD7776241A79FFB0 /* LXModalManager-Info.plist */,
+				70F9C98A79A78FBDE06274635AB73450 /* LXModalManager-prefix.pch */,
+				D00BD5F903D07D1FF1651FA26A4366DA /* LXModalManager-umbrella.h */,
+				95B1442C1F3327D4F37698E88CFF6436 /* LXModalManager.debug.xcconfig */,
+				C48DB5D5AEE0C045E61C1471FB777537 /* LXModalManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/LXModalManager";
 			sourceTree = "<group>";
 		};
 		1F49BE8C377F68AC74F8ECC9D8384A85 /* LXFitManager */ = {
@@ -142,6 +162,15 @@
 			path = "../Target Support Files/LXFitManager";
 			sourceTree = "<group>";
 		};
+		3835EB91D80FEC3B189D964BA087C0C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				210710B83846B0CA28FD57365AC8809C /* LXFitManager.framework */,
+				75039B10CF01DA53521ED8C7F0DA4EF2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3E3A38B384B37A98A6ECD81E5908CECB /* Pods-LXModalModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,38 +188,52 @@
 			path = "Target Support Files/Pods-LXModalModule";
 			sourceTree = "<group>";
 		};
-		3EB0AFA8BC79831D2B476B961A7A31BE /* LXModalManager */ = {
+		7358131CD1D0C72E745F4A528C7313B9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				91935DA0AE345020D1346A92E9D7EDC9 /* Pod */,
-				FEB090B3737A8C331F97539E3841AE57 /* Support Files */,
-			);
-			name = LXModalManager;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6000BE06ADDD54B2664CB054AC47E362 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3EB0AFA8BC79831D2B476B961A7A31BE /* LXModalManager */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		91935DA0AE345020D1346A92E9D7EDC9 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3321CEF32F261193B2413491DD44DA3B /* LXModalManager.podspec */,
+				0CC3D498D50E97E696274A6839E719F0 /* LXModalManager.podspec */,
+				E30E3E3963F122F09DC2F34C9CF03F72 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		75039B10CF01DA53521ED8C7F0DA4EF2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				CDCB65B3DDB68CB2801794AC6AD13094 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		7E0D517C525AB5B918AB2A40A551DD96 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA419C0027C46BA66FB82B4704B09B25 /* LXModalManager */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C8DA98F53E57BD2E7F9EF10F45BF6E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3888DD53BBE7B7DFC0D5D8540E57BE76 /* LXFitManager.framework */,
+				86CD4B82A39F7BA9E6A7E3FA7EE070A1 /* LXModalManager.framework */,
+				C4BB252B0FC59BA870D52AC24E0FADAC /* Pods_LXModalModule.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA419C0027C46BA66FB82B4704B09B25 /* LXModalManager */ = {
+			isa = PBXGroup;
+			children = (
+				D4DEB37302E9A44826279F50DDF8AABE /* LXBaseModalController.swift */,
+				AF30DFF124D4CE0EA2FE7A651ABB71C0 /* LXModalConfig.swift */,
+				FA47DDCD0ACE5FFDBC1ABDE9D17AFB41 /* LXShowModalController.swift */,
+				7358131CD1D0C72E745F4A528C7313B9 /* Pod */,
+				1A189848A5FE5B12CD1B754B3922B7BC /* Support Files */,
+			);
+			name = LXModalManager;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CE2CCAEAA06A55E3CF5E6439C212C048 /* Targets Support Files */ = {
@@ -205,30 +248,12 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				6000BE06ADDD54B2664CB054AC47E362 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7E0D517C525AB5B918AB2A40A551DD96 /* Development Pods */,
+				3835EB91D80FEC3B189D964BA087C0C8 /* Frameworks */,
 				0F76CE583899BBA7985B97DDB194FA3F /* Pods */,
-				03E082EFC21B2DAE8EA2CCEA779B7143 /* Products */,
+				C8DA98F53E57BD2E7F9EF10F45BF6E66 /* Products */,
 				CE2CCAEAA06A55E3CF5E6439C212C048 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEB090B3737A8C331F97539E3841AE57 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3BF79FA989D084E5C4A7738AE5E88F63 /* LXModalManager.debug.xcconfig */,
-				A29FBF78CC31EC555FC83BDB8B627784 /* LXModalManager.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/LXModalManager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +264,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A04CDF981D068D83B1B34A7728A7468 /* LXFitManager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D70C670BC5335372605588DF28CC511 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8DD9A548E52795F66C881A77416CCB /* LXModalManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +286,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5A1FA955CF41BF1F64630FB280A3B0C0 /* LXModalManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4014BB7F9E7F55C5BC846B136DBA0C7 /* Build configuration list for PBXNativeTarget "LXModalManager" */;
+			buildPhases = (
+				4D70C670BC5335372605588DF28CC511 /* Headers */,
+				AB90247D83B36EE84219DF6A40834117 /* Sources */,
+				FB94C9BCA6FB525BDB14146BF4E3C5EC /* Frameworks */,
+				F12A82035A142398E5FFD3255A59CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F87F2BB90A96525BCBC639339E53539 /* PBXTargetDependency */,
+			);
+			name = LXModalManager;
+			productName = LXModalManager;
+			productReference = 86CD4B82A39F7BA9E6A7E3FA7EE070A1 /* LXModalManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		65A330740E47EE0658F69D5AC577D219 /* Pods-LXModalModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75CD79DF408C332274FD8C7A5B723243 /* Build configuration list for PBXNativeTarget "Pods-LXModalModule" */;
@@ -301,7 +353,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -309,7 +361,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 03E082EFC21B2DAE8EA2CCEA779B7143 /* Products */;
+			productRefGroup = C8DA98F53E57BD2E7F9EF10F45BF6E66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -335,6 +387,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F12A82035A142398E5FFD3255A59CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -343,6 +402,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E2373AEF16FC765BED92911CF71B9E /* Pods-LXModalModule-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB90247D83B36EE84219DF6A40834117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16499105C258169A70FDAEF51B1E48C7 /* LXBaseModalController.swift in Sources */,
+				A50EEDD0E3C25CE72F41EEB91828EAD5 /* LXModalConfig.swift in Sources */,
+				38D3288CBE96BCDFFAE8576ED9BD7884 /* LXModalManager-dummy.m in Sources */,
+				D9948DB50310EB270FE3DB9E37FF6CD8 /* LXShowModalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,35 +434,89 @@
 			target = 5A1FA955CF41BF1F64630FB280A3B0C0 /* LXModalManager */;
 			targetProxy = D4FC1D0D2AF7BB406B20A1B5C5A1ECFE /* PBXContainerItemProxy */;
 		};
+		5F87F2BB90A96525BCBC639339E53539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LXFitManager;
+			target = 8ED050C8B9768109B203E0B9CBBCAEC1 /* LXFitManager */;
+			targetProxy = FF23CD695CDC2A1A05ABAD615C9726FA /* PBXContainerItemProxy */;
+		};
 		802880A4840769627D46FFAFDCF80CCA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LXFitManager;
 			target = 8ED050C8B9768109B203E0B9CBBCAEC1 /* LXFitManager */;
 			targetProxy = 31135C0EB5CAEE778F6EF593582691E9 /* PBXContainerItemProxy */;
 		};
-		E0D39E8F694576ED409D85B24BF61B2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LXFitManager;
-			target = 8ED050C8B9768109B203E0B9CBBCAEC1 /* LXFitManager */;
-			targetProxy = A903E049F01218F5E90B2EA4BF129971 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		52846926C8828A27B433FC79FEF4C423 /* Release */ = {
+		2FEC0BCD2F0A8C251947719DF84AD714 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29FBF78CC31EC555FC83BDB8B627784 /* LXModalManager.release.xcconfig */;
+			baseConfigurationReference = 95B1442C1F3327D4F37698E88CFF6436 /* LXModalManager.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LXModalManager/LXModalManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXModalManager/LXModalManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "Target Support Files/LXModalManager/LXModalManager.modulemap";
+				PRODUCT_MODULE_NAME = LXModalManager;
+				PRODUCT_NAME = LXModalManager;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B7E5EAE1CCAE50C1E88BC60BC5C4A63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48DB5D5AEE0C045E61C1471FB777537 /* LXModalManager.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LXModalManager/LXModalManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXModalManager/LXModalManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LXModalManager/LXModalManager.modulemap";
+				PRODUCT_MODULE_NAME = LXModalManager;
+				PRODUCT_NAME = LXModalManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -608,22 +732,6 @@
 			};
 			name = Debug;
 		};
-		BFB98AAB7CC534F7190FBCEA69E9BA0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BF79FA989D084E5C4A7738AE5E88F63 /* LXModalManager.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,15 +795,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D5526F1FC25DA6D20DDA9EBC2EA8746 /* Build configuration list for PBXAggregateTarget "LXModalManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFB98AAB7CC534F7190FBCEA69E9BA0B /* Debug */,
-				52846926C8828A27B433FC79FEF4C423 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -710,6 +809,15 @@
 			buildConfigurations = (
 				AFC88D5A544F51CA0242192335D8A4AD /* Debug */,
 				759760E427E14DA354988097A381FA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4014BB7F9E7F55C5BC846B136DBA0C7 /* Build configuration list for PBXNativeTarget "LXModalManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FEC0BCD2F0A8C251947719DF84AD714 /* Debug */,
+				6B7E5EAE1CCAE50C1E88BC60BC5C4A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

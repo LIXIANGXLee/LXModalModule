@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-LXModalModule/Pods-LXModalModule-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/LXFitManager/LXFitManager.framework
+${BUILT_PRODUCTS_DIR}/LXModalManager/LXModalManager.framework

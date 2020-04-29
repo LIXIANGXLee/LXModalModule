@@ -1,0 +1,6 @@
+framework module LXModalManager {
+  umbrella header "LXModalManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

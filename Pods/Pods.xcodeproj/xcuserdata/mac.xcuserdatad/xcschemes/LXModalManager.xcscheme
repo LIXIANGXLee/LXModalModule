@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5A1FA955CF41BF1F64630FB280A3B0C0"
-               BuildableName = "LXModalManager"
+               BuildableName = "LXModalManager.framework"
                BlueprintName = "LXModalManager"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

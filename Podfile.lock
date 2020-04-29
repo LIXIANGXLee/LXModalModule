@@ -1,6 +1,6 @@
 PODS:
   - LXFitManager (1.0.0)
-  - LXModalManager (0.0.1):
+  - LXModalManager (1.0.0):
     - LXFitManager (~> 1.0.0)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   LXFitManager: e8f88896ba1c848c263c49250b590802a987ab3e
-  LXModalManager: db8c0ed28569b4b430742e3d27f12670291bbfb8
+  LXModalManager: 01aa359aa2ed735fdbd3eafde25d4b74a62fa81c
 
 PODFILE CHECKSUM: 21bf34daf93c1682b0320b2bd4d471f396f1d787
 
