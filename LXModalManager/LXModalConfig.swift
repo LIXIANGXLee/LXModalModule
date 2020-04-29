@@ -10,6 +10,8 @@ import UIKit
 
 public class LXModalConfig {
 
+    public init(){}
+    
     /// 内容圆角
     public var contentCornerRadius: CGFloat = 10
     

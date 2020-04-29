@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LXModalManager
 
 class ViewController: UIViewController {
 

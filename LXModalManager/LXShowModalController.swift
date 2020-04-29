@@ -16,7 +16,7 @@ public struct LXShowModalItem {
    public var title: String
    public var callBack: CallBack?
     
-    init(title: String, callBack: CallBack?) {
+   public init(title: String, callBack: CallBack?) {
         self.title = title
         self.callBack = callBack
     }
@@ -50,7 +50,7 @@ public class LXShowModalController: LXBaseModalController {
     private var modalItems = [LXShowModalItem]()
     // 配置文件
     private var modaConfig: LXModalConfig
-    init(_ modaConfig: LXModalConfig) {
+    public init(_ modaConfig: LXModalConfig) {
         self.modaConfig = modaConfig
         super.init(nibName: nil, bundle: nil)
     }
