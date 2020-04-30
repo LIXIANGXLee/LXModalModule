@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
       let config = LXModalConfig()
         
-        config.contentCornerRadius = 20
+        config.contentCornerRadius = 10
         config.titleColor = UIColor.blue
         config.titleFont = UIFont.systemFont(ofSize: 20)
         config.contentFont = UIFont.systemFont(ofSize: 16)
@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         config.alignment = .center
         config.itemColor = UIColor.red
         config.itemH = 55
-        
+        config.contentViewW = 320
+        config.contentH = 100
       let showModalVC = LXShowModalController(config)
          showModalVC.show(title: "王者荣耀", content: "的方的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空v的方式度\r\n过噶多少空的方式度过<br>噶多少空v的方式度过噶多少空vv的<br>方式度过噶多少空v<br>的方式度<br>过噶多少空vv的方式度过<br>噶多少空v的方式度过噶多少空v的方式度过噶多少空的方式度过噶多少空v的方式度过噶多少空vvvv的方式度过噶多少空v的方式度过噶多少空vvvv的方式度过噶多少空式度过噶多少空", modalItems:
             LXShowModalItem(title: "确定", callBack: {

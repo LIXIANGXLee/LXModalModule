@@ -14,7 +14,8 @@ public class LXModalConfig {
     
     /// 内容圆角
     public var contentCornerRadius: CGFloat = 10
-    
+    public var contentViewW: CGFloat = 280
+
     /// 标题颜色和字体大小
     public var titleFont: UIFont = UIFont.systemFont(ofSize: 18, weight: .medium)
     public var titleColor: UIColor = UIColor.black
@@ -22,6 +23,7 @@ public class LXModalConfig {
     /// 内容颜色和字体大小
     public var contentFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .regular)
     public var contentColor: UIColor = UIColor.black
+    public var contentH: CGFloat = 220
     public var lineSpacing: CGFloat = 5 // 行间距
     public var alignment: NSTextAlignment = .center 
     

@@ -132,11 +132,13 @@ extension LXShowModalController {
     private func setAllContentFrame() {
        
         self.contentView.layer.cornerRadius = LXFit.fitFloat(self.modaConfig.contentCornerRadius)
-        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - LXFit.fitFloat(280)) * 0.5, y: (UIScreen.main.bounds.height - LXFit.fitFloat(280)) * 0.5, width: LXFit.fitFloat(280), height: min(LXFit.fitFloat(220 + 74 + self.modaConfig.itemH)  ,contentViewHeight()))
+        
+        let cMinH = min(LXFit.fitFloat(self.modaConfig.contentH + 74 + self.modaConfig.itemH)  ,contentViewHeight())
+        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - LXFit.fitFloat(self.modaConfig.contentViewW)) * 0.5, y: (UIScreen.main.bounds.height - cMinH) * 0.5, width: LXFit.fitFloat(self.modaConfig.contentViewW), height: cMinH)
         
         titleLabel.frame = CGRect(x: LXFit.fitFloat(5), y: LXFit.fitFloat(20), width: contentView.frame.width - LXFit.fitFloat(10), height: LXFit.fitFloat(28))
         
-        contentTextView.frame = CGRect(x: LXFit.fitFloat(24), y: titleLabel.frame.maxY + LXFit.fitFloat(13), width: contentView.frame.width - LXFit.fitFloat(48), height:  min(contentHeight(), LXFit.fitFloat(220)))
+        contentTextView.frame = CGRect(x: LXFit.fitFloat(24), y: titleLabel.frame.maxY + LXFit.fitFloat(13), width: contentView.frame.width - LXFit.fitFloat(48), height:  min(contentHeight(), LXFit.fitFloat(self.modaConfig.contentH)))
         lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + LXFit.fitFloat(13) , width: contentView.frame.width, height: LXFit.fitFloat(0.5))
         
         let colW = contentView.frame.width / CGFloat(itemViews.count)
