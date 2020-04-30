@@ -39,12 +39,12 @@ class ViewController: UIViewController {
         config.contentColor = UIColor.purple
         
         config.lineSpacing = 15
-        config.alignment = .left
+        config.alignment = .center
         config.itemColor = UIColor.red
         config.itemH = 55
         
       let showModalVC = LXShowModalController(config)
-         showModalVC.show(title: "王者荣耀", content: "第三方但是噶的风格发达国家风蛋糕地方给的风格哦的发生地个人经过人给对方观看热狗开发歌 mad歌，的风格<br>都是废话的时光是对方\r\n道具收费附近丢失多少啊但是发的时光第三方但是噶的风格发达国家风蛋糕地方给的风格哦的发生地个人经过人给对方观看热狗开发歌 mad歌，的风格<br>都是废话的时光是对方\r\n道具收费附近丢失多少啊但是发的时光", modalItems:
+         showModalVC.show(title: "王者荣耀", content: "的方的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空的方式度过噶多少空v的方式度\r\n过噶多少空的方式度过<br>噶多少空v的方式度过噶多少空vv的<br>方式度过噶多少空v<br>的方式度<br>过噶多少空vv的方式度过<br>噶多少空v的方式度过噶多少空v的方式度过噶多少空的方式度过噶多少空v的方式度过噶多少空vvvv的方式度过噶多少空v的方式度过噶多少空vvvv的方式度过噶多少空式度过噶多少空", modalItems:
             LXShowModalItem(title: "确定", callBack: {
                 print("------1-")
             }),LXShowModalItem(title: "取消", callBack: {

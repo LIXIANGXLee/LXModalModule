@@ -132,12 +132,12 @@ extension LXShowModalController {
     private func setAllContentFrame() {
        
         self.contentView.layer.cornerRadius = LXFit.fitFloat(self.modaConfig.contentCornerRadius)
-        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - LXFit.fitFloat(280)) * 0.5, y: (UIScreen.main.bounds.height - LXFit.fitFloat(280)) * 0.5, width: LXFit.fitFloat(280), height: min(LXFit.fitFloat(220 + 81 + self.modaConfig.itemH)  ,contentViewHeight()))
+        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - LXFit.fitFloat(280)) * 0.5, y: (UIScreen.main.bounds.height - LXFit.fitFloat(280)) * 0.5, width: LXFit.fitFloat(280), height: min(LXFit.fitFloat(220 + 74 + self.modaConfig.itemH)  ,contentViewHeight()))
         
         titleLabel.frame = CGRect(x: LXFit.fitFloat(5), y: LXFit.fitFloat(20), width: contentView.frame.width - LXFit.fitFloat(10), height: LXFit.fitFloat(28))
         
-        contentTextView.frame = CGRect(x: LXFit.fitFloat(24), y: titleLabel.frame.maxY + LXFit.fitFloat(13), width: contentView.frame.width - LXFit.fitFloat(48), height: min(contentHeight(), LXFit.fitFloat(220)))
-        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + LXFit.fitFloat(20) , width: contentView.frame.width, height: LXFit.fitFloat(0.5))
+        contentTextView.frame = CGRect(x: LXFit.fitFloat(24), y: titleLabel.frame.maxY + LXFit.fitFloat(13), width: contentView.frame.width - LXFit.fitFloat(48), height:  min(contentHeight(), LXFit.fitFloat(220)))
+        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + LXFit.fitFloat(13) , width: contentView.frame.width, height: LXFit.fitFloat(0.5))
         
         let colW = contentView.frame.width / CGFloat(itemViews.count)
         for (index, itemView) in itemViews.enumerated() {
@@ -152,6 +152,9 @@ extension LXShowModalController {
     
     /// 内容高度
     private func contentHeight() -> CGFloat {
+        
+        if contentTextView.text.count <= 0 { return 0}
+        
         let size = CGSize(width: LXFit.fitFloat(272), height: CGFloat.greatestFiniteMagnitude)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 15
@@ -161,7 +164,7 @@ extension LXShowModalController {
     
     ///contentView 高度
     private func contentViewHeight() -> CGFloat {
-        return contentHeight() + LXFit.fitFloat(89) + LXFit.fitFloat(self.modaConfig.itemH)
+        return contentHeight() + LXFit.fitFloat(74) + LXFit.fitFloat(self.modaConfig.itemH)
     }
 }
 
