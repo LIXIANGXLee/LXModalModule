@@ -11,7 +11,12 @@ import UIKit
 public class LXModalConfig {
 
     public init(){}
-    
+    /// 标题顶部距离
+    public var titleTop: CGFloat = 20
+    public var contentTextTop: CGFloat = 13
+    public var titleAndcontentTextX: CGFloat = 24
+    public var lineTop: CGFloat = 13
+
     /// 内容圆角
     public var contentCornerRadius: CGFloat = 10
     public var contentViewW: CGFloat = 280
