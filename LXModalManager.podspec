@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LXModalManager"
-  spec.version      = "1.2.0"
-  spec.summary      = "LXModalManager."
+  spec.version      = "1.3.0"
+  spec.summary      = "按钮弹窗、列表弹窗、可自定义弹窗"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
