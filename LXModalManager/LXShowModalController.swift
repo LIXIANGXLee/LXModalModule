@@ -20,7 +20,7 @@ public struct LXShowModalItem {
    public var callBack: ShowModalCallBack?
    public init(title: String,
                 titleColor: UIColor = UIColor.black,
-                titleFont: UIFont = UIFont.systemFont(ofSize: 15,weight: .regular),
+                titleFont: UIFont = UIFont.systemFont(ofSize: 16,weight: .regular).fitFont,
                 callBack: ShowModalCallBack?)
     {
         self.title = title
