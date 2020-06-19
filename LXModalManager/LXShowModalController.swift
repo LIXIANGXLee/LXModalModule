@@ -9,14 +9,14 @@
 import UIKit
 import LXFitManager
 
-public typealias CallBack = (() -> Void)
+public typealias ShowModalCallBack = (() -> Void)
 
 // MARK: - ShowModalItem
 public struct LXShowModalItem {
    public var title: String
-   public var callBack: CallBack?
+   public var callBack: ShowModalCallBack?
     
-   public init(title: String, callBack: CallBack?) {
+   public init(title: String, callBack: ShowModalCallBack?) {
         self.title = title
         self.callBack = callBack
     }
