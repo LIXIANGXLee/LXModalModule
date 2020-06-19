@@ -140,15 +140,15 @@ extension LXShowModalController {
     /// 布局尺寸
     private func setAllContentFrame() {
        
-        self.contentView.layer.cornerRadius = LXFit.fitFloat(self.modaConfig.contentCornerRadius)
+        self.contentView.layer.cornerRadius = self.modaConfig.contentCornerRadius
         
-        let cMinH = min(LXFit.fitFloat(self.modaConfig.contentH + 74 + self.modaConfig.itemH)  ,contentViewHeight())
-        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - LXFit.fitFloat(self.modaConfig.contentViewW)) * 0.5, y: (UIScreen.main.bounds.height - cMinH) * 0.5, width: LXFit.fitFloat(self.modaConfig.contentViewW), height: cMinH)
+        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - self.modaConfig.contentViewW) * 0.5, y: (UIScreen.main.bounds.height - contentViewHeight()) * 0.5, width: self.modaConfig.contentViewW, height: contentViewHeight())
         
-        titleLabel.frame = CGRect(x: LXFit.fitFloat(self.modaConfig.titleAndcontentTextX), y: LXFit.fitFloat(self.modaConfig.titleTop), width: contentView.frame.width - LXFit.fitFloat(self.modaConfig.titleAndcontentTextX * 2), height: LXFit.fitFloat(28))
+        titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: self.modaConfig.titleTop, width: contentView.frame.width - self.modaConfig.contentViewSubViewX * 2, height: titleHeight())
         
-        contentTextView.frame = CGRect(x: LXFit.fitFloat(self.modaConfig.titleAndcontentTextX), y: titleLabel.frame.maxY + LXFit.fitFloat(self.modaConfig.contentTextTop), width: contentView.frame.width - LXFit.fitFloat(self.modaConfig.titleAndcontentTextX * 2), height:  min(contentHeight(), LXFit.fitFloat(self.modaConfig.contentH)))
-        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + LXFit.fitFloat(self.modaConfig.lineTop) , width: contentView.frame.width, height: LXFit.fitFloat(0.5))
+        contentTextView.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: titleLabel.frame.maxY + self.modaConfig.contentTop, width: contentView.frame.width - self.modaConfig.contentViewSubViewX * 2, height:  min(contentHeight(), self.modaConfig.contentH))
+        
+        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + self.modaConfig.lineTop, width: contentView.frame.width, height: LXFit.fitFloat(0.5))
         
         let colW = contentView.frame.width / CGFloat(itemViews.count)
         for (index, itemView) in itemViews.enumerated() {
@@ -156,26 +156,33 @@ extension LXShowModalController {
                 itemView.lineView.isHidden = true
             }
             itemView.tag = index
-            itemView.frame = CGRect(x: CGFloat(index) * colW, y: lineView.frame.maxY, width: colW, height: LXFit.fitFloat(self.modaConfig.itemH))
+            itemView.frame = CGRect(x: CGFloat(index) * colW, y: lineView.frame.maxY, width: colW, height: self.modaConfig.itemH)
             itemView.setLineViewFrame()
         }
     }
     
+    /// 标题高度
+    private func titleHeight() -> CGFloat {
+        
+        guard let attText = self.titleLabel.attributedText, attText.string.count > 0 else { return 0}
+        let size = CGSize(width:modaConfig.contentViewW - modaConfig.contentViewSubViewX, height: CGFloat.greatestFiniteMagnitude)
+        let contentSize = attText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
+       return contentSize.height
+    }
+    
     /// 内容高度
     private func contentHeight() -> CGFloat {
-        
         if contentTextView.text.count <= 0 { return 0}
-        
-        let size = CGSize(width: LXFit.fitFloat(272), height: CGFloat.greatestFiniteMagnitude)
+        let size = CGSize(width: modaConfig.contentViewW - modaConfig.contentViewSubViewX, height: CGFloat.greatestFiniteMagnitude)
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 15
+        paragraphStyle.lineSpacing = modaConfig.lineSpacing
         let contentSize = contentTextView.attributedText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
-        return contentSize.height + LXFit.fitFloat(8)
+        return min(contentSize.height, modaConfig.contentH)
     }
     
     ///contentView 高度
     private func contentViewHeight() -> CGFloat {
-        return contentHeight() + LXFit.fitFloat(74) + LXFit.fitFloat(self.modaConfig.itemH)
+        return modaConfig.titleTop + titleHeight() + modaConfig.contentTop + contentHeight() + modaConfig.lineTop + LXFit.fitFloat(0.5) + modaConfig.itemH
     }
 }
 
