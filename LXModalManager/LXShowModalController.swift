@@ -14,10 +14,18 @@ public typealias ShowModalCallBack = (() -> Void)
 // MARK: - ShowModalItem
 public struct LXShowModalItem {
    public var title: String
+   public var titleColor: UIColor
+   public var titleFont: UIFont 
+
    public var callBack: ShowModalCallBack?
-    
-   public init(title: String, callBack: ShowModalCallBack?) {
+   public init(title: String,
+                titleColor: UIColor = UIColor.black,
+                titleFont: UIFont = UIFont.systemFont(ofSize: 15,weight: .regular),
+                callBack: ShowModalCallBack?)
+    {
         self.title = title
+        self.titleFont = titleFont
+        self.titleColor = titleColor
         self.callBack = callBack
     }
 }
@@ -115,7 +123,8 @@ extension LXShowModalController {
             let itemView = LXItemView()
             itemView.lineView.backgroundColor = self.modaConfig.lineColor
             itemView.setTitle(modalItem.title, for:.normal)
-            itemView.setTitleColor(self.modaConfig.itemColor, for: .normal)
+            itemView.setTitleColor(modalItem.titleColor, for: .normal)
+            itemView.titleLabel?.font = modalItem.titleFont.fitFont
             contentView.addSubview(itemView)
             itemViews.append(itemView)
             itemView.addTarget(self, action: #selector(itemViewClick(_:)), for: UIControl.Event.touchUpInside)

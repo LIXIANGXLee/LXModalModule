@@ -35,9 +35,7 @@ public class LXModalConfig {
     /// 线颜色
     public var lineColor: UIColor = UIColor.lightGray
     
-    /// item 字体大小和颜色
-    public var itemFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .regular)
-    public var itemColor: UIColor = UIColor.black
+    /// item 高度
     public var itemH: CGFloat = 55
 
 }
