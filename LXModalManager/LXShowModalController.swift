@@ -140,15 +140,15 @@ extension LXShowModalController {
     /// 布局尺寸
     private func setAllContentFrame() {
        
-        self.contentView.layer.cornerRadius = self.modaConfig.contentCornerRadius
+        contentView.layer.cornerRadius = self.modaConfig.contentCornerRadius
         
-        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - self.modaConfig.contentViewW) * 0.5, y: (UIScreen.main.bounds.height - contentViewHeight()) * 0.5, width: self.modaConfig.contentViewW, height: contentViewHeight())
+        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - modaConfig.contentViewW) * 0.5, y: (UIScreen.main.bounds.height - contentViewHeight()) * 0.5 + modaConfig.contentViewOffSet, width: modaConfig.contentViewW, height: contentViewHeight())
         
-        titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: self.modaConfig.titleTop, width: contentView.frame.width - self.modaConfig.contentViewSubViewX * 2, height: titleHeight())
+        titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: modaConfig.titleTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height: titleHeight())
         
-        contentTextView.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: titleLabel.frame.maxY + self.modaConfig.contentTop, width: contentView.frame.width - self.modaConfig.contentViewSubViewX * 2, height:  min(contentHeight(), self.modaConfig.contentH))
+        contentTextView.frame = CGRect(x:modaConfig.contentViewSubViewX, y: titleLabel.frame.maxY + modaConfig.contentTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height:  min(contentHeight(), modaConfig.contentH))
         
-        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + self.modaConfig.lineTop, width: contentView.frame.width, height: LXFit.fitFloat(0.5))
+        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + modaConfig.lineTop, width: contentView.frame.width, height: LXFit.fitFloat(0.5))
         
         let colW = contentView.frame.width / CGFloat(itemViews.count)
         for (index, itemView) in itemViews.enumerated() {

@@ -17,6 +17,9 @@ public class LXModalConfig {
     public var contentCornerRadius: CGFloat = LXFit.fitFloat(10)
     public var contentViewSubViewX: CGFloat = LXFit.fitFloat(20)
     public var contentViewW: CGFloat =  LXFit.fitFloat(288)
+    
+    //  距离中间的偏移量
+    public var contentViewOffSet: CGFloat =  0
 
     /// 标题颜色和字体大小
     public var titleTop: CGFloat =  LXFit.fitFloat(20)
