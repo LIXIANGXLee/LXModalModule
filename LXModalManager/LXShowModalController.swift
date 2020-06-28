@@ -93,7 +93,6 @@ extension LXShowModalController {
                  modalItems: LXShowModalItem...) {
        self.modalItems = modalItems
        self.titleLabel.text = title
-  
        //设置内容
        setContent(content)
        //ModaItem 可多个
@@ -177,7 +176,7 @@ extension LXShowModalController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = modaConfig.lineSpacing
         let contentSize = contentTextView.attributedText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
-        return min(contentSize.height, modaConfig.contentH)
+        return min(contentSize.height + LXFit.fitFloat(8), modaConfig.contentH)
     }
     
     ///contentView 高度

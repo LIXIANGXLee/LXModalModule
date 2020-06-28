@@ -57,10 +57,10 @@ class ViewController: UIViewController {
         config.alignment = .center
         config.itemH = 55
         config.contentViewW = 320
-        config.contentH = 300
+//        config.contentH = 300
         config.alignment = .left
       let showModalVC = LXShowModalController(config)
-         showModalVC.show(title: "王者荣耀", content: "", modalItems:
+         showModalVC.show(title: "王者荣耀", content: "受到很高风蛋糕上的风格风糕上的风格风蛋糕上", modalItems:
             LXShowModalItem(title: "确定", titleColor: UIColor.red , callBack: {
                 print("------1-")
             }),LXShowModalItem(title: "取消", titleColor: UIColor.black , callBack: {
