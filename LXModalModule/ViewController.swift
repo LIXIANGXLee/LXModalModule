@@ -8,6 +8,7 @@
 
 import UIKit
 import LXModalManager
+import LXFitManager
 
 struct model: LXShowListProtocol {
     var id: String = "0"
@@ -47,20 +48,19 @@ class ViewController: UIViewController {
 
     @objc private func btnclick(_ btn: UIButton) {
       let config = LXModalConfig()
-        config.contentCornerRadius = 10
+        config.contentCornerRadius = LXFit.fitFloat(10)
         config.titleColor = UIColor.blue
-        config.titleFont = UIFont.systemFont(ofSize: 20)
-        config.contentFont = UIFont.systemFont(ofSize: 16)
+        config.titleFont = UIFont.systemFont(ofSize: 20).fitFont
+        config.contentFont = UIFont.systemFont(ofSize: 16).fitFont
         config.contentColor = UIColor.purple
 
-        config.lineSpacing = 15
         config.alignment = .center
-        config.itemH = 55
-        config.contentViewW = 320
+        config.itemH = LXFit.fitFloat(55)
+        config.contentViewW = LXFit.fitFloat(310)
 //        config.contentH = 300
         config.alignment = .left
       let showModalVC = LXShowModalController(config)
-         showModalVC.show(title: "王者荣耀", content: "受到很高风蛋糕上的风格风糕上的风格风蛋糕上", modalItems:
+         showModalVC.show(title: "王者荣耀", content: "受到很高风蛋糕上风格风糕上的e风格风蛋糕上", modalItems:
             LXShowModalItem(title: "确定", titleColor: UIColor.red , callBack: {
                 print("------1-")
             }),LXShowModalItem(title: "取消", titleColor: UIColor.black , callBack: {

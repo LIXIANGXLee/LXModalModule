@@ -35,20 +35,22 @@ public class LXShowModalController: LXBaseModalController {
     private lazy var titleLabel: UILabel = {
        let titleLabel = UILabel()
        titleLabel.textAlignment = .center
-       titleLabel.textColor = self.modaConfig.titleColor
-       titleLabel.font = self.modaConfig.titleFont.fitFont
+       titleLabel.textColor = modaConfig.titleColor
+       titleLabel.font = modaConfig.titleFont.fitFont
        return titleLabel
     }()
        
     private lazy var contentTextView: UITextView = {
        let contentTextView = UITextView()
        contentTextView.isEditable = false
+       contentTextView.isScrollEnabled = modaConfig.contentScrollEnabled
+       contentTextView.isSelectable = modaConfig.contentSelectable
        return contentTextView
     }()
     
     private lazy var lineView: UIView = {
         let lineView = UIView()
-        lineView.backgroundColor = self.modaConfig.lineColor
+        lineView.backgroundColor = modaConfig.lineColor
         return lineView
     }()
     
@@ -93,12 +95,14 @@ extension LXShowModalController {
                  modalItems: LXShowModalItem...) {
        self.modalItems = modalItems
        self.titleLabel.text = title
+    
        //设置内容
        setContent(content)
        //ModaItem 可多个
        setModaItem()
        // 布局尺寸
        setAllContentFrame()
+    
        aboveViewController?.present(self, animated: true, completion: nil)
     }
 }
@@ -145,6 +149,7 @@ extension LXShowModalController {
         
         titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: modaConfig.titleTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height: titleHeight())
         
+        contentTextView.textContainerInset = UIEdgeInsets.zero
         contentTextView.frame = CGRect(x:modaConfig.contentViewSubViewX, y: titleLabel.frame.maxY + modaConfig.contentTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height:  min(contentHeight(), modaConfig.contentH))
         
         lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + modaConfig.lineTop, width: contentView.frame.width, height: LXFit.fitFloat(0.5))
@@ -171,12 +176,12 @@ extension LXShowModalController {
     
     /// 内容高度
     private func contentHeight() -> CGFloat {
-        if contentTextView.text.count <= 0 { return 0}
+        if contentTextView.text.count <= 0 { return 0 }
         let size = CGSize(width: modaConfig.contentViewW - modaConfig.contentViewSubViewX, height: CGFloat.greatestFiniteMagnitude)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = modaConfig.lineSpacing
         let contentSize = contentTextView.attributedText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
-        return min(contentSize.height + LXFit.fitFloat(8), modaConfig.contentH)
+        return min(contentSize.height, modaConfig.contentH)
     }
     
     ///contentView 高度
