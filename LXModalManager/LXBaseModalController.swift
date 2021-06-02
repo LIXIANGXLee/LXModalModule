@@ -9,10 +9,11 @@
 import UIKit
 
 // MARK: - 可继承
-open  class LXBaseModalController: UIViewController {
+open class LXBaseModalController: UIViewController {
 
     /// 重写构造方法
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?,
+                         bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         //设置模态状态
@@ -39,12 +40,14 @@ open  class LXBaseModalController: UIViewController {
     
      /// 白色弹窗的view的点击事件
       open lazy var contentGesture: UITapGestureRecognizer = {
-          return  UITapGestureRecognizer(target: self, action: #selector(contentViewTap(tap:)))
+          return  UITapGestureRecognizer(target: self,
+                                         action: #selector(contentViewTap(tap:)))
       }()
     
     /// 全屏点击事件监听
       open lazy var tapGesture: UITapGestureRecognizer = {
-          return UITapGestureRecognizer(target: self, action: #selector(backgroundViewTap))
+          return UITapGestureRecognizer(target: self,
+                                        action: #selector(backgroundViewTap))
       }()
     
     /// 懒加载内容的view,
@@ -71,7 +74,8 @@ extension LXBaseModalController {
     /// 模态窗口dismiss方法
     open func dismissViewController() {
        if navigationController != nil {
-           navigationController?.dismiss(animated: true, completion: nil)
+           navigationController?.dismiss(animated: true,
+                                         completion: nil)
        }else{
            dismiss(animated: true, completion: nil)
        }

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LXModalManager"
-  spec.version      = "1.6.0"
+  spec.version      = "2.0.0"
   spec.summary      = "按钮弹窗、列表弹窗、可自定义弹窗"
 
   # This description is used to generate tags and improve search results.
@@ -95,7 +95,6 @@ Pod::Spec.new do |spec|
   #
   
     spec.source_files = 'LXModalManager/*.{swift}'
-    spec.dependency "LXFitManager"
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"

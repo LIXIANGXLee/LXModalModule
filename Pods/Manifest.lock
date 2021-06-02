@@ -1,9 +1,9 @@
 PODS:
-  - LXFitManager (1.0.0)
-  - LXModalManager (1.2.0):
-    - LXFitManager (~> 1.0.0)
+  - LXFitManager (6.1.0)
+  - LXModalManager (2.0.0)
 
 DEPENDENCIES:
+  - LXFitManager
   - LXModalManager (from `./`)
 
 SPEC REPOS:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  LXFitManager: e8f88896ba1c848c263c49250b590802a987ab3e
-  LXModalManager: 5ff69dd8d90cf2264b65917ee767fce8b7502515
+  LXFitManager: 3f36597e77165280ad9214e84cbeb39785528e70
+  LXModalManager: bd151038b01de7c5cf9e4f72ffc9810103cce7f9
 
-PODFILE CHECKSUM: 21bf34daf93c1682b0320b2bd4d471f396f1d787
+PODFILE CHECKSUM: f276871da042aca6280c1c3e54b74b08a690d0da
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

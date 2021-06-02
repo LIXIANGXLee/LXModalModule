@@ -5,7 +5,7 @@ target 'LXModalModule' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
     pod 'LXModalManager', :path => './'
-
+    pod 'LXFitManager'
   # Pods for LXModalModule
 
 end

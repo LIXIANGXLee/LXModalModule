@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LXFitManager
 
 public typealias ShowModalCallBack = (() -> Void)
 
@@ -20,9 +19,9 @@ public struct LXShowModalItem {
    public var callBack: ShowModalCallBack?
    public init(title: String,
                 titleColor: UIColor = UIColor.black,
-                titleFont: UIFont = UIFont.systemFont(ofSize: 16,weight: .regular).fitFont,
-                callBack: ShowModalCallBack?)
-    {
+                titleFont: UIFont = UIFont.systemFont(ofSize: 16,
+                                                      weight: .regular),
+                callBack: ShowModalCallBack?) {
         self.title = title
         self.titleFont = titleFont
         self.titleColor = titleColor
@@ -36,7 +35,7 @@ public class LXShowModalController: LXBaseModalController {
        let titleLabel = UILabel()
        titleLabel.textAlignment = .center
        titleLabel.textColor = modaConfig.titleColor
-       titleLabel.font = modaConfig.titleFont.fitFont
+       titleLabel.font = modaConfig.titleFont
        return titleLabel
     }()
        
@@ -90,7 +89,8 @@ extension LXShowModalController {
    ///   - content: 内容
    ///   - period: 内容分几段 方便计算高度
    ///   - item:  可以多个
-   public func show(title: String,
+    public func show(with vc: UIViewController? = nil,
+                     title: String,
                  content: String,
                  modalItems: LXShowModalItem...) {
        self.modalItems = modalItems
@@ -103,7 +103,11 @@ extension LXShowModalController {
        // 布局尺寸
        setAllContentFrame()
     
-       aboveViewController?.present(self, animated: true, completion: nil)
+        let aboveVC = vc ?? aboveViewController
+        
+        aboveVC?.present(self,
+                         animated: true,
+                         completion: nil)
     }
 }
 
@@ -115,7 +119,7 @@ extension LXShowModalController {
         paragraphStyle.lineSpacing = self.modaConfig.lineSpacing
         paragraphStyle.alignment  = self.modaConfig.alignment
         let content = message.replacingOccurrences(of: "<br>", with: "\r\n")
-        let attrs = [NSAttributedString.Key.font: self.modaConfig.contentFont.fitFont,NSAttributedString.Key.foregroundColor: self.modaConfig.contentColor,NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let attrs = [NSAttributedString.Key.font: self.modaConfig.contentFont,NSAttributedString.Key.foregroundColor: self.modaConfig.contentColor,NSAttributedString.Key.paragraphStyle: paragraphStyle]
         contentTextView.attributedText = NSAttributedString(string: content, attributes: attrs)
     }
     
@@ -127,10 +131,12 @@ extension LXShowModalController {
             itemView.lineView.backgroundColor = self.modaConfig.lineColor
             itemView.setTitle(modalItem.title, for:.normal)
             itemView.setTitleColor(modalItem.titleColor, for: .normal)
-            itemView.titleLabel?.font = modalItem.titleFont.fitFont
+            itemView.titleLabel?.font = modalItem.titleFont
             contentView.addSubview(itemView)
             itemViews.append(itemView)
-            itemView.addTarget(self, action: #selector(itemViewClick(_:)), for: UIControl.Event.touchUpInside)
+            itemView.addTarget(self,
+                               action: #selector(itemViewClick(_:)),
+                               for: UIControl.Event.touchUpInside)
         }
     }
     
@@ -145,14 +151,26 @@ extension LXShowModalController {
        
         contentView.layer.cornerRadius = self.modaConfig.contentCornerRadius
         
-        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - modaConfig.contentViewW) * 0.5, y: (UIScreen.main.bounds.height - contentViewHeight()) * 0.5 + modaConfig.contentViewOffSet, width: modaConfig.contentViewW, height: contentViewHeight())
+        contentView.frame = CGRect(x: (UIScreen.main.bounds.width - modaConfig.contentViewW) * 0.5,
+                                   y: (UIScreen.main.bounds.height - contentViewHeight()) * 0.5 + modaConfig.contentViewOffSet,
+                                   width: modaConfig.contentViewW,
+                                   height: contentViewHeight())
         
-        titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX, y: modaConfig.titleTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height: titleHeight())
+        titleLabel.frame = CGRect(x: self.modaConfig.contentViewSubViewX,
+                                  y: modaConfig.titleTop,
+                                  width: contentView.frame.width - modaConfig.contentViewSubViewX * 2,
+                                  height: titleHeight())
         
         contentTextView.textContainerInset = UIEdgeInsets.zero
-        contentTextView.frame = CGRect(x:modaConfig.contentViewSubViewX, y: titleLabel.frame.maxY + modaConfig.contentTop, width: contentView.frame.width - modaConfig.contentViewSubViewX * 2, height:  min(contentHeight(), modaConfig.contentH))
+        contentTextView.frame = CGRect(x:modaConfig.contentViewSubViewX,
+                                       y: titleLabel.frame.maxY + modaConfig.contentTop,
+                                       width: contentView.frame.width - modaConfig.contentViewSubViewX * 2,
+                                       height:  min(contentHeight(), modaConfig.contentH))
         
-        lineView.frame = CGRect(x: 0, y:contentTextView.frame.maxY + modaConfig.lineTop, width: contentView.frame.width, height: LXFit.fitFloat(0.5))
+        lineView.frame = CGRect(x: 0,
+                                y:contentTextView.frame.maxY + modaConfig.lineTop,
+                                width: contentView.frame.width,
+                                height: scale_ip6_width(0.5))
         
         let colW = contentView.frame.width / CGFloat(itemViews.count)
         for (index, itemView) in itemViews.enumerated() {
@@ -160,7 +178,10 @@ extension LXShowModalController {
                 itemView.lineView.isHidden = true
             }
             itemView.tag = index
-            itemView.frame = CGRect(x: CGFloat(index) * colW, y: lineView.frame.maxY, width: colW, height: self.modaConfig.itemH)
+            itemView.frame = CGRect(x: CGFloat(index) * colW,
+                                    y: lineView.frame.maxY,
+                                    width: colW,
+                                    height: self.modaConfig.itemH)
             itemView.setLineViewFrame()
         }
     }
@@ -169,24 +190,30 @@ extension LXShowModalController {
     private func titleHeight() -> CGFloat {
         
         guard let attText = self.titleLabel.attributedText, attText.string.count > 0 else { return 0}
-        let size = CGSize(width:modaConfig.contentViewW - modaConfig.contentViewSubViewX, height: CGFloat.greatestFiniteMagnitude)
-        let contentSize = attText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
+        let size = CGSize(width:modaConfig.contentViewW - modaConfig.contentViewSubViewX,
+                          height: CGFloat.greatestFiniteMagnitude)
+        let contentSize = attText.boundingRect(with: size,
+                                               options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                               context: nil).size
        return contentSize.height
     }
     
     /// 内容高度
     private func contentHeight() -> CGFloat {
         if contentTextView.text.count <= 0 { return 0 }
-        let size = CGSize(width: modaConfig.contentViewW - modaConfig.contentViewSubViewX, height: CGFloat.greatestFiniteMagnitude)
+        let size = CGSize(width: modaConfig.contentViewW - modaConfig.contentViewSubViewX,
+                          height: CGFloat.greatestFiniteMagnitude)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = modaConfig.lineSpacing
-        let contentSize = contentTextView.attributedText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil).size
+        let contentSize = contentTextView.attributedText.boundingRect(with: size,
+                                                                      options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                                                      context: nil).size
         return min(contentSize.height, modaConfig.contentH)
     }
     
     ///contentView 高度
     private func contentViewHeight() -> CGFloat {
-        return modaConfig.titleTop + titleHeight() + modaConfig.contentTop + contentHeight() + modaConfig.lineTop + LXFit.fitFloat(0.5) + modaConfig.itemH
+        return modaConfig.titleTop + titleHeight() + modaConfig.contentTop + contentHeight() + modaConfig.lineTop + scale_ip6_width(0.5) + modaConfig.itemH
     }
 }
 
@@ -202,7 +229,10 @@ public class LXItemView: UIButton {
     
     ///布局线的尺寸
     public func setLineViewFrame() {
-        lineView.frame = CGRect(x: frame.width - LXFit.fitFloat(0.5), y: 0, width: LXFit.fitFloat(0.5), height: frame.height)
+        lineView.frame = CGRect(x: frame.width - scale_ip6_width(0.5),
+                                y: 0,
+                                width: scale_ip6_width(0.5),
+                                height: frame.height)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
