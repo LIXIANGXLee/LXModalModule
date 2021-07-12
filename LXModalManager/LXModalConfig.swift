@@ -48,7 +48,9 @@ public class LXModalConfig {
     
     /// item 高度
     public var itemH: CGFloat = scale_ip6_width(55)
-
+    
+    /// 点击背景是否关闭弹窗
+    public var isDismissBg: Bool = true
 }
 /// 标准iphone6适配宽度
  func scale_ip6_width(_ distance: CGFloat) -> CGFloat {

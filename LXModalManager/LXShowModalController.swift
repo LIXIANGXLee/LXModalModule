@@ -77,6 +77,12 @@ public class LXShowModalController: LXBaseModalController {
         contentView.addSubview(lineView)
     }
     
+    public override func backgroundViewTap() {
+        if self.modaConfig.isDismissBg {
+            super.backgroundViewTap()
+        }
+    }
+    
 }
 
 // MARK: - 外部调用类 public
